@@ -632,8 +632,8 @@ fverde   { color: #339900; }
                                     onclick="mostrarocultar('indice');" 
                                     onMouseover="this.style.color='#0000FF'; " 
                                     onMouseout="this.style.color='#000000';" 
-                                    target="centro"
-                                    href="Area/Categoria/Subcategoria.html"> 
+                                    target="_parent"
+                                    href="login.html"> 
                                     Financeiro&nbsp;
                                 </a>  
                             </td>
@@ -858,17 +858,19 @@ fverde   { color: #339900; }
                         this.style.cursor='default';  "
                     
                     onClick="
-                        document.getElementById('centro').src='Area/Categoria/Subcategoria.html';    
-                        document.getElementById('coluna2tb')    .style.display = 'none';       "
+                        window.open('login.html', '_parent');
+                        document.getElementById('coluna2tb')    .style.display = 'none';
+                    "
                 > 
                     <a 
-                        target="centro" href="Area/Categoria/Subcategoria.html"
+                        target="_parent" href="login.html"
                         style="
                             text-decoration: none; color: #fff; font-family: Arial, Helvetica, sans-serif; 
                             font-size: 14px;"
                        
                         onclick=" 
-                            document.getElementById('coluna4tb').style.display = 'none'; "
+                            document.getElementById('coluna4tb').style.display = 'none'; 
+                        "
                     >
                             FINANCEIRO</a> 
                 </td> 
