@@ -1,0 +1,235 @@
+<html>
+    
+    <head>
+        
+        <title></title>
+        <meta charset="UTF-8">
+        
+        <!-- <meta http-equiv="refresh" content=1;url="https://jmarysystems.blogspot.com.br/"> -->
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+        
+        <script type="text/javascript" src='arquivos/js/jquery.js'></script>
+        <script type="text/javascript" src='arquivos/js/jmary_menu_jquery.js'></script>
+        <script type="text/javascript" src='arquivos/js/mostrarTd_Js.js'></script>
+
+        <link rel="stylesheet" href="arquivos/css/jmarymenudrop.css"/>
+        <link rel="stylesheet" href="arquivos/css/jmary_topo.css"/>
+        <link rel="stylesheet" href="arquivos/css/estrutura.css"/>   
+        
+        <link rel="shortcut icon" href="arquivos/icon/jmol.png">
+        
+        <script type="text/javascript" src='arquivos/js/fonteMaisMenos.js'></script>
+        <script type="text/javascript" src='arquivos/js/imprimir_div.js'></script>
+        
+        
+        <style>
+          
+        </style>
+    </head>
+    
+    <body 
+        style="width: 100%; height: 100%; padding: 0; margin: 0;
+               font-family: Arial, Helvetica, sans-serif; font-size: 14px; color: black; line-height: 1.5;" >    
+        
+
+<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+-0
+-1
+-2
+- #### IFRAME CENTRO INÍCIO #### z-index: 2000;--> 
+<!-- 
+-0
+-1             
+-2    
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++--> 
+<input type="hidden" id="loginjm" value="null">
+<input type="hidden" id="senhajm" value="null">
+<input type="hidden" id="urlatual" value="nao">
+<input type="hidden" id="loginefetuado" value="nao">
+
+<div id="central" style="width: 100%; height: 100%; padding: 0; margin: 0;" >  
+    
+        <table border="0" cellpadding="0" cellspacing="0" align="center" valign="top" style="width: 100%; height: 100%; padding: 0; margin: 0;"> 
+            <tr>
+                <td align="center" valign="top">
+                        
+                    <table border="0" cellpadding="0" cellspacing="0" align="center" valign="top" style="padding: 0; margin: 0;"> 
+                        <tr>
+                            <td align="center" valign="top" >
+                    
+                                <div align="center" style="width: 100%;">
+                                    <ul style="list-style:none; line-height: 1.5; padding: 0px; margin: 0px;" >
+                                        <li style="float: left; background-color: #00ffff">
+                                            
+                                            <table border="0" cellpadding="0" cellspacing="0">
+		                                <tr>
+			                            <td> 
+                                                        <img width="87" height="85" title="Acesso Seguro" 
+                                                        src="arquivos/imagens/000_login/login.png"> 
+                                                    </td>
+			                            <td><h1 align="center" style="font:bold 150% verdana,arial,helvetica;">Entrar no Sistema &nbsp;</h1></td>
+		                                </tr>	
+	                                    </table>
+                                            
+                                            <form action="home.html" method="post" id="formulario_login">
+                                                                                        
+                                            <table style="color: #004080; font-size: 14px; font-family: Tahoma, Verdana, Arial, Sans-Serif;" border="1" bordercolor="gray" cellpadding="5">
+		                                <tr>
+			                            <td>Email:</td>
+			                            <td><input id="form_login_login" name="login" style="height: 20px" value=""></input></td>
+		                                </tr>
+		                                <tr>
+			                            <td>Senha:</td>
+			                            <td><input type="password"  id="form_login_senha" name="senha" style="height: 20px" value=""></input></td>
+		                                </tr>
+		                                <tr>
+			                            <td colspan="2" align="center">
+                                                        <!-- <input type="submit" value="Entrar" style="height: 23px"></input> -->
+                                                        <input type="button" onclick="fazerLogin('#formulario_login');" value="Entrar" style="height: 23px"/>
+                                                        
+                                                        <!-- <input type="button" onclick="envia_form_login();" value="Novo" style="height: 23px"/> -->
+                                                    </td>
+		                                </tr>		
+	                                    </table>
+                                            
+                                            </form>
+                                            
+                                            <script type="text/javascript">
+                                                
+                                                function fazerLogin(){
+                                                    
+                                                    var usr  = document.getElementById( "form_login_login" ).value;           
+                                                    var pass = document.getElementById( "form_login_senha" ).value;
+    
+                                                    if( usr === "" || pass === "" ) {
+            
+                                                        alert( "Informe o nome de Usuário e a \nsua senha para \nefetuar login!\n" + usr + " - " + pass  );
+                                                    }
+                                                    else{
+                                                        
+                                                        var url_inicial = 'https://script.google.com/macros/s/AKfycbwuIauIIPbeBGOdvoMEsOAChz0dGZiUar5Zd2kfanvN3Wimjbk4/exec';
+                                                        var parametros = '?email=' + usr + '&' + 'senha=' + pass;
+                                                        //var url = url_inicial + parametros;
+                                                        var url2 = 'https://script.google.com/macros/s/AKfycbwuIauIIPbeBGOdvoMEsOAChz0dGZiUar5Zd2kfanvN3Wimjbk4/exec' + '?email=' + usr + '&' + 'senha=' + pass;
+                                                        var url3 = 'https://script.google.com/macros/s/AKfycbwuIauIIPbeBGOdvoMEsOAChz0dGZiUar5Zd2kfanvN3Wimjbk4/exec?email=cleilson&senha=123';
+                                                        
+                                                        window.location.href = url2;
+                                                    }
+                                                }
+                                            </script>   
+                                            
+                                            <br>
+                                        </li>
+                                        <li style="float: left;">
+                                            <img src="arquivos/imagens/000_login/logo.jpg" alt="" style="width:279px; height: 174px">
+                                        </li>
+                                    </ul>
+                                </div>
+                            </td>    
+                        </tr>  
+                    </table>
+                    
+                </td>    
+            </tr>    
+        </table>   
+            
+   </div> 
+<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+-0
+-1
+-2
+- #### IFRAME CENTRO FIM #### --> 
+<!-- 
+-0
+-1
+-2    
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++--> 
+
+<script type="text/javascript">
+function envia_form_generico(id_form){   
+    var form = $(id_form);
+    form.submit(function () { 
+            $.ajax({
+            type: form.attr('method'),
+            url: form.attr('action'),
+            data: form.serialize(),
+            beforeSend : function(){ document.getElementById( "central" ).innerHTML = '<h2 align="center">carregando...<br> <img width="150px" height="150px" src="../../../utilidades/utilidades_imagens/javafx_loading_100x100.gif"> </h2>'; },
+            error: function(){ alert( "Erro na comunicacao com o servidor!" ); },
+            success: function (data) { document.getElementById( "central" ).innerHTML = data; }
+        });
+        return false;    
+    });
+}
+</script> 
+
+<script type="text/javascript">
+    function fazerRequisicao(xx){
+
+        //var url = document.getElementById('url').value;
+        var url = xx;
+           
+        var xhttp = new XMLHttpRequest();
+        xhttp.open("GET", url, false);
+
+        xhttp.send();//A execução do script pára aqui até a requisição retornar do servidor
+
+        document.getElementById("central").innerHTML = contador + "\n" + xhttp.responseText;
+    }
+</script>   
+
+
+<script type="text/javascript">
+function envia_form_login(){   
+    try{
+        var usr  = document.getElementById( "form_login_login" ).value;           
+        var pass = document.getElementById( "form_login_senha" ).value;
+    
+        if( usr === "" || pass === "" ) {
+            
+            alert( "Informe o nome de Usuário e a Senha para logar!\n" + usr + " - " + pass  );
+        }
+        else{
+            
+            var urlxjm  = "COMANDO/LOGIN" + "/" + usr + "/" + pass;  
+            
+            $.ajax({
+                type: "POST",
+                url:  urlxjm,
+                data: { paginasolicitada: "admin/topo/topo_index.jsp", cmd: "login", login: usr, senha: pass },
+                        
+                error: function(result){ 
+                    alert( "Erro inesperado na requisição da página!"  ); 
+                    $("#tudo").html(result);
+                },
+                
+                //success: function(result){ document.getElementById( "central" ).innerHTML = result; }
+                
+                success: function(result){ 
+                    $("#tudo").html(result); 
+                    setarlogin( usr, pass, urlxjm )
+                }
+                
+                //success: function(result){ document.getElementById( "tudo" ).innerHTML = result; } -- window.location.href = "";
+                //timeout: ajaxTimeOut,
+                //statusCode: { 404: function() { alert( "page not found" ); } }
+            });
+        }
+        
+    }catch(e){ alert( "Informe o nome de Usuário e a Senha 2!\n" + e  ); }  
+}
+
+function setarlogin(usr, pass, urlatual){   
+    try{
+        
+        document.getElementById( "loginjm" ).value = usr;
+        document.getElementById( "senhajm" ).value = pass;
+        document.getElementById( "urlatual" ).value = urlatual;
+        document.getElementById( "loginefetuado" ).value = "sim";
+        
+    }catch(e){ alert( "Informe o nome de Usuário e a Senha 2!\n" + e  ); }  
+}
+</script>   
+
+    </body>
+</html>
